@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="fade-in one">
+<head>
+    <meta charset="utf-8">
+    <title>Eagle Sundance Phone</title>
+    <meta name="description" content="Eagle Sundance Phone.">
+    <meta name="keywords" content="Eagle, Sundance, Ceremony">
+    <meta name="author" content="Milwaukee Joe">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+        html, body, #jaas-container { height: 100%; }
+
+        /* Fade-in page */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .fade-in {
+            opacity: 0;  /* make things invisible upon start */
+            animation: fadeIn ease-in 1;
+            animation-fill-mode: forwards;  /* stay at the last keyframe value (opacity: 1) */
+            animation-duration: 1s;
+        }
+
+        .fade-in.one {
+            animation-delay: 1s;
+        }
+
+        html, body {
+            border: 0px;
+            padding: 0px;
+            text-align: center;
+            margin: 0px;
+        }
+    </style>
+
+    <script src='https://8x8.vc/vpaas-magic-cookie-cdfb30fa42044f2981e4bbe232158575/external_api.js' async></script>
+    <script>
+        window.onload = () => {
+            const api = new JitsiMeetExternalAPI("8x8.vc", {
+                roomName: "vpaas-magic-cookie-cdfb30fa42044f2981e4bbe232158575/Eagle-Sundance-Phone",
+                parentNode: document.querySelector('#jaas-container'),
+                // Make sure to include a JWT if you intend to record,
+                // make outbound calls or use any other premium features!
+                // jwt: "null"
+            });
+        }
+    </script>
+</head>
+
+<body style="background-color: black;">
+    <div id="jaas-container"></div>
+</body>
+</html>

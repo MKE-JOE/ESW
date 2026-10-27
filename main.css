@@ -1,0 +1,198 @@
+/* Main page styles (moved out of index.html). */
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F5F5F5;
+    border: 1px solid gray;
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.8s;
+}
+
+body.dark-mode {
+    background-color: #250A07;
+    color: #FF5733;
+}
+
+/* Device prefers dark mode, unless the visitor switched to light */
+@media (prefers-color-scheme: dark) {
+    body:not(.light-mode) {
+        background-color: #250A07;
+        color: #FF5733;
+    }
+}
+
+/* Dark mode readability: links, marquee and the supply list rows */
+body.dark-mode .marquee { background-color: #3B1510; }
+body.dark-mode .scroll table tr { background-color: transparent !important; }
+body.dark-mode .scroll table th,
+body.dark-mode .scroll table td { border-color: #6B2D24 !important; }
+body.dark-mode a:not(.resources a):not(.resources2 a) { color: #FFB38A; }
+
+@media (prefers-color-scheme: dark) {
+    body:not(.light-mode) .marquee { background-color: #3B1510; }
+    body:not(.light-mode) .scroll table tr { background-color: transparent !important; }
+    body:not(.light-mode) .scroll table th,
+    body:not(.light-mode) .scroll table td { border-color: #6B2D24 !important; }
+    body:not(.light-mode) a:not(.resources a):not(.resources2 a) { color: #FFB38A; }
+}
+
+/* Spacing that used to come from invisible 1-pixel images and line breaks */
+.gap-1 { height: 1.15em; height: 1lh; }
+.gap-2 { height: 2.3em; height: 2lh; }
+
+/* Fade-in page - make keyframes that tell the start state and the end state of our object */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.fade-in {
+    opacity: 0;  /* make things invisible upon start */
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;  /* stay at the last keyframe value (opacity: 1) */
+    animation-duration: 1s;
+}
+
+.fade-in.one {
+    animation-delay: 1s;
+}
+
+/* make object 'shake' on hover and 'sticky' on scroll */
+img.sticky {
+    position: sticky;
+    top: 0;
+    width: 120px;
+    z-index: 99999;
+}
+
+img.sticky:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.marquee {
+    background-color: white;
+    overflow: hidden;
+    padding: 1em;
+    border: 1px solid gray;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+    font-size: 110%;
+    margin: 0;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.scroll {
+    border: 3px solid;
+    padding: 1.25em;
+    border-color: red;
+    margin: 1em 1em;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: left;
+    letter-spacing: 0.1em;
+}
+
+div.lowerbackground {
+    background: url(sweetgrass.jpg);
+    background-size: cover;
+    border: 2px solid black;
+}
+
+div.resources {
+    margin: 20px;
+    background-color: #DFDEDE;
+    border: 1px solid black;
+    opacity: 0.9;
+}
+
+div.resourcesp {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+div.lowerbackground2 {
+    background: url(sage.png);
+    background-size: cover;
+    border: 2px solid black;
+}
+
+div.resources2 {
+    margin: 20px;
+    background-color: rgba(223, 222, 222, 0.9);
+    border: 1px solid black;
+}
+
+div.resourcesp2 {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+}
+
+.cupojoe {
+    margin: auto;
+    width: 100%;
+    background-color: transparent;
+}
+
+.path {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    margin: auto;
+}
+
+.shape {
+    position: absolute;
+    left: 0;
+    background-image: url(watercolor-coffee-cup.png);
+    width: 123px;
+    height: 150px;
+    display: block;
+    top: 0;
+    animation: ani 10s infinite;
+}
+
+@keyframes ani {
+    0% {
+        left: 0;
+        transform: translateX(0%);
+    }
+    50% {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+    100% {
+        left: 0;
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="fade-in one">
+<head>
+    <meta charset="utf-8">
+    <title>Eagle Sundance Login</title>
+    <meta name="description" content="Eagle Sundance Directions and Resources.">
+    <meta name="keywords" content="Eagle, Sundance, Ceremony">
+    <meta name="author" content="Milwaukee Joe">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <header>
+        <div style="text-align: center;">
+            <audio id="audio" src="thunder-rumble.mp3"></audio>
+            <img id="img" src="login-button.png" width="300" height="60" style="padding: 20px;" alt="Login to Continue">
+        </div>
+    </header>
+
+    <i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i><i class="rain"></i>
+
+    <div>
+        <div class="gap-1"></div>
+    </div>
+
+    <!-- Drag the tobacco into the hand to enter -->
+    <div id="div1">
+        <img src="tobacco-twist3.png" draggable="true" ondragstart="drag(event)" id="drag1" style="width:17vw; min-width:200px;" alt="Tobacco tie: drag me to the hand">
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="hand2.png" style="width:27vw; min-width:200px;" alt="Open hand">
+    </div>
+
+    <!-- two layers of Image -->
+    <div class="bg"></div>
+    <div class="lightning flashit"></div>
+
+    <div class="gap-22"></div>
+
+    <footer style="height: 100px; text-align: center;">
+        <i style="color: lightgray; font-size: 10px;">*No tobacco, actual or virtual, was harmed during the making of this login screen.</i>
+    </footer>
+
+    <script src="DragDropTouch.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        var MAIN_PAGE = './';
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        // Only the tobacco opens the way in; anything else dropped on the hand is ignored.
+        var draggingTobacco = false;
+
+        function drag(ev) {
+            draggingTobacco = true;
+            ev.dataTransfer.setData('Url', MAIN_PAGE);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            if (draggingTobacco) {
+                EagleAuth.logIn();
+                window.location = MAIN_PAGE;
+            }
+        }
+
+        document.addEventListener('dragend', function () {
+            draggingTobacco = false;
+        });
+
+        document.getElementById('img').addEventListener('click', function () {
+            document.getElementById('audio').play();
+        });
+    </script>
+</body>
+</html>

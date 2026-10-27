@@ -1,0 +1,253 @@
+/* Login page styles (moved out of login.html). */
+
+html, body { margin: 0; padding: 0; overflow: hidden; }
+
+html {
+  height: 100%;
+}
+
+/* Rain: 150 drops share one animation; each drop's values are set below. */
+.rain {
+  background: white;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  height: 50px;
+  position: absolute;
+  width: 1px;
+  animation-name: rain;
+  animation-delay: var(--delay);
+  animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+  left: var(--left);
+  opacity: var(--opacity);
+  top: var(--top);
+}
+
+@keyframes rain {
+  0% {
+    left: var(--left);
+    opacity: var(--opacity);
+    top: var(--top);
+  }
+  100% {
+    opacity: 0;
+    top: var(--end);
+  }
+}
+
+.rain:nth-of-type(1) { --delay: 6s; --duration: 10s; --left: 88%; --opacity: 0.47; --top: -99%; --end: 139%; }
+.rain:nth-of-type(2) { --delay: 10s; --duration: 5s; --left: 97%; --opacity: 0.38; --top: -58%; --end: 98%; }
+.rain:nth-of-type(3) { --delay: 14s; --duration: 10s; --left: 89%; --opacity: 0.57; --top: -96%; --end: 136%; }
+.rain:nth-of-type(4) { --delay: 13s; --duration: 6s; --left: 29%; --opacity: 0.34; --top: -56%; --end: 96%; }
+.rain:nth-of-type(5) { --delay: 13s; --duration: 5s; --left: 85%; --opacity: 0.57; --top: -79%; --end: 119%; }
+.rain:nth-of-type(6) { --delay: 15s; --duration: 10s; --left: 77%; --opacity: 0.53; --top: -75%; --end: 115%; }
+.rain:nth-of-type(7) { --delay: 1s; --duration: 9s; --left: 31%; --opacity: 0.53; --top: -98%; --end: 138%; }
+.rain:nth-of-type(8) { --delay: 0s; --duration: 9s; --left: 72%; --opacity: 0.37; --top: -64%; --end: 104%; }
+.rain:nth-of-type(9) { --delay: 4s; --duration: 7s; --left: 70%; --opacity: 0.57; --top: -95%; --end: 135%; }
+.rain:nth-of-type(10) { --delay: 0s; --duration: 10s; --left: 24%; --opacity: 0.45; --top: -82%; --end: 122%; }
+.rain:nth-of-type(11) { --delay: 8s; --duration: 10s; --left: 20%; --opacity: 0.38; --top: -94%; --end: 134%; }
+.rain:nth-of-type(12) { --delay: 1s; --duration: 5s; --left: 60%; --opacity: 0.49; --top: -93%; --end: 133%; }
+.rain:nth-of-type(13) { --delay: 13s; --duration: 9s; --left: 88%; --opacity: 0.32; --top: -87%; --end: 127%; }
+.rain:nth-of-type(14) { --delay: 16s; --duration: 6s; --left: 31%; --opacity: 0.37; --top: -78%; --end: 118%; }
+.rain:nth-of-type(15) { --delay: 8s; --duration: 7s; --left: 45%; --opacity: 0.46; --top: -78%; --end: 118%; }
+.rain:nth-of-type(16) { --delay: 0s; --duration: 5s; --left: 12%; --opacity: 0.31; --top: -56%; --end: 96%; }
+.rain:nth-of-type(17) { --delay: 14s; --duration: 9s; --left: 39%; --opacity: 0.56; --top: -83%; --end: 123%; }
+.rain:nth-of-type(18) { --delay: 8s; --duration: 7s; --left: 69%; --opacity: 0.32; --top: -78%; --end: 118%; }
+.rain:nth-of-type(19) { --delay: 12s; --duration: 6s; --left: 28%; --opacity: 0.33; --top: -85%; --end: 125%; }
+.rain:nth-of-type(20) { --delay: 8s; --duration: 7s; --left: 41%; --opacity: 0.52; --top: -59%; --end: 99%; }
+.rain:nth-of-type(21) { --delay: 8s; --duration: 5s; --left: 43%; --opacity: 0.39; --top: -52%; --end: 92%; }
+.rain:nth-of-type(22) { --delay: 2s; --duration: 8s; --left: 83%; --opacity: 0.49; --top: -81%; --end: 121%; }
+.rain:nth-of-type(23) { --delay: 11s; --duration: 5s; --left: 97%; --opacity: 0.31; --top: -89%; --end: 129%; }
+.rain:nth-of-type(24) { --delay: 7s; --duration: 5s; --left: 76%; --opacity: 0.4; --top: -81%; --end: 121%; }
+.rain:nth-of-type(25) { --delay: 6s; --duration: 9s; --left: 58%; --opacity: 0.37; --top: -74%; --end: 114%; }
+.rain:nth-of-type(26) { --delay: 3s; --duration: 5s; --left: 8%; --opacity: 0.45; --top: -73%; --end: 113%; }
+.rain:nth-of-type(27) { --delay: 15s; --duration: 5s; --left: 70%; --opacity: 0.39; --top: -99%; --end: 139%; }
+.rain:nth-of-type(28) { --delay: 5s; --duration: 8s; --left: 87%; --opacity: 0.39; --top: -56%; --end: 96%; }
+.rain:nth-of-type(29) { --delay: 15s; --duration: 10s; --left: 61%; --opacity: 0.59; --top: -87%; --end: 127%; }
+.rain:nth-of-type(30) { --delay: 9s; --duration: 9s; --left: 82%; --opacity: 0.53; --top: -51%; --end: 91%; }
+.rain:nth-of-type(31) { --delay: 6s; --duration: 8s; --left: 63%; --opacity: 0.57; --top: -95%; --end: 135%; }
+.rain:nth-of-type(32) { --delay: 14s; --duration: 9s; --left: 32%; --opacity: 0.38; --top: -51%; --end: 91%; }
+.rain:nth-of-type(33) { --delay: 13s; --duration: 6s; --left: 72%; --opacity: 0.47; --top: -100%; --end: 140%; }
+.rain:nth-of-type(34) { --delay: 6s; --duration: 7s; --left: 35%; --opacity: 0.46; --top: -92%; --end: 132%; }
+.rain:nth-of-type(35) { --delay: 3s; --duration: 8s; --left: 3%; --opacity: 0.53; --top: -89%; --end: 129%; }
+.rain:nth-of-type(36) { --delay: 1s; --duration: 8s; --left: 87%; --opacity: 0.52; --top: -80%; --end: 120%; }
+.rain:nth-of-type(37) { --delay: 0s; --duration: 9s; --left: 11%; --opacity: 0.57; --top: -62%; --end: 102%; }
+.rain:nth-of-type(38) { --delay: 10s; --duration: 5s; --left: 42%; --opacity: 0.53; --top: -100%; --end: 140%; }
+.rain:nth-of-type(39) { --delay: 11s; --duration: 8s; --left: 4%; --opacity: 0.58; --top: -59%; --end: 99%; }
+.rain:nth-of-type(40) { --delay: 7s; --duration: 8s; --left: 89%; --opacity: 0.59; --top: -68%; --end: 108%; }
+.rain:nth-of-type(41) { --delay: 15s; --duration: 10s; --left: 18%; --opacity: 0.42; --top: -92%; --end: 132%; }
+.rain:nth-of-type(42) { --delay: 15s; --duration: 5s; --left: 70%; --opacity: 0.36; --top: -87%; --end: 127%; }
+.rain:nth-of-type(43) { --delay: 7s; --duration: 7s; --left: 14%; --opacity: 0.31; --top: -85%; --end: 125%; }
+.rain:nth-of-type(44) { --delay: 0s; --duration: 8s; --left: 95%; --opacity: 0.4; --top: -59%; --end: 99%; }
+.rain:nth-of-type(45) { --delay: 14s; --duration: 6s; --left: 33%; --opacity: 0.57; --top: -64%; --end: 104%; }
+.rain:nth-of-type(46) { --delay: 6s; --duration: 7s; --left: 42%; --opacity: 0.53; --top: -83%; --end: 123%; }
+.rain:nth-of-type(47) { --delay: 0s; --duration: 5s; --left: 48%; --opacity: 0.32; --top: -56%; --end: 96%; }
+.rain:nth-of-type(48) { --delay: 16s; --duration: 7s; --left: 93%; --opacity: 0.57; --top: -54%; --end: 94%; }
+.rain:nth-of-type(49) { --delay: 12s; --duration: 8s; --left: 6%; --opacity: 0.43; --top: -76%; --end: 116%; }
+.rain:nth-of-type(50) { --delay: 1s; --duration: 10s; --left: 10%; --opacity: 0.37; --top: -88%; --end: 128%; }
+.rain:nth-of-type(51) { --delay: 19s; --duration: 10s; --left: 68%; --opacity: 0.57; --top: -88%; --end: 128%; }
+.rain:nth-of-type(52) { --delay: 18s; --duration: 8s; --left: 36%; --opacity: 0.33; --top: -72%; --end: 112%; }
+.rain:nth-of-type(53) { --delay: 5s; --duration: 9s; --left: 57%; --opacity: 0.44; --top: -84%; --end: 124%; }
+.rain:nth-of-type(54) { --delay: 8s; --duration: 8s; --left: 27%; --opacity: 0.37; --top: -90%; --end: 130%; }
+.rain:nth-of-type(55) { --delay: 6s; --duration: 10s; --left: 8%; --opacity: 0.54; --top: -74%; --end: 114%; }
+.rain:nth-of-type(56) { --delay: 13s; --duration: 7s; --left: 89%; --opacity: 0.44; --top: -88%; --end: 128%; }
+.rain:nth-of-type(57) { --delay: 15s; --duration: 8s; --left: 74%; --opacity: 0.51; --top: -85%; --end: 125%; }
+.rain:nth-of-type(58) { --delay: 11s; --duration: 5s; --left: 54%; --opacity: 0.54; --top: -56%; --end: 96%; }
+.rain:nth-of-type(59) { --delay: 0s; --duration: 5s; --left: 86%; --opacity: 0.31; --top: -89%; --end: 129%; }
+.rain:nth-of-type(60) { --delay: 16s; --duration: 6s; --left: 52%; --opacity: 0.34; --top: -66%; --end: 106%; }
+.rain:nth-of-type(61) { --delay: 8s; --duration: 5s; --left: 96%; --opacity: 0.5; --top: -69%; --end: 109%; }
+.rain:nth-of-type(62) { --delay: 7s; --duration: 7s; --left: 34%; --opacity: 0.36; --top: -54%; --end: 94%; }
+.rain:nth-of-type(63) { --delay: 17s; --duration: 9s; --left: 49%; --opacity: 0.53; --top: -51%; --end: 91%; }
+.rain:nth-of-type(64) { --delay: 3s; --duration: 8s; --left: 90%; --opacity: 0.5; --top: -100%; --end: 140%; }
+.rain:nth-of-type(65) { --delay: 13s; --duration: 6s; --left: 12%; --opacity: 0.47; --top: -90%; --end: 130%; }
+.rain:nth-of-type(66) { --delay: 1s; --duration: 8s; --left: 3%; --opacity: 0.49; --top: -85%; --end: 125%; }
+.rain:nth-of-type(67) { --delay: 4s; --duration: 7s; --left: 63%; --opacity: 0.31; --top: -80%; --end: 120%; }
+.rain:nth-of-type(68) { --delay: 8s; --duration: 7s; --left: 60%; --opacity: 0.55; --top: -53%; --end: 93%; }
+.rain:nth-of-type(69) { --delay: 0s; --duration: 7s; --left: 44%; --opacity: 0.36; --top: -56%; --end: 96%; }
+.rain:nth-of-type(70) { --delay: 19s; --duration: 7s; --left: 56%; --opacity: 0.51; --top: -57%; --end: 97%; }
+.rain:nth-of-type(71) { --delay: 3s; --duration: 10s; --left: 52%; --opacity: 0.47; --top: -94%; --end: 134%; }
+.rain:nth-of-type(72) { --delay: 5s; --duration: 5s; --left: 60%; --opacity: 0.52; --top: -80%; --end: 120%; }
+.rain:nth-of-type(73) { --delay: 16s; --duration: 8s; --left: 66%; --opacity: 0.46; --top: -93%; --end: 133%; }
+.rain:nth-of-type(74) { --delay: 2s; --duration: 9s; --left: 42%; --opacity: 0.53; --top: -59%; --end: 99%; }
+.rain:nth-of-type(75) { --delay: 17s; --duration: 9s; --left: 78%; --opacity: 0.48; --top: -95%; --end: 135%; }
+.rain:nth-of-type(76) { --delay: 6s; --duration: 9s; --left: 84%; --opacity: 0.35; --top: -62%; --end: 102%; }
+.rain:nth-of-type(77) { --delay: 2s; --duration: 9s; --left: 56%; --opacity: 0.37; --top: -51%; --end: 91%; }
+.rain:nth-of-type(78) { --delay: 15s; --duration: 10s; --left: 11%; --opacity: 0.37; --top: -72%; --end: 112%; }
+.rain:nth-of-type(79) { --delay: 13s; --duration: 8s; --left: 41%; --opacity: 0.53; --top: -57%; --end: 97%; }
+.rain:nth-of-type(80) { --delay: 14s; --duration: 8s; --left: 20%; --opacity: 0.48; --top: -74%; --end: 114%; }
+.rain:nth-of-type(81) { --delay: 17s; --duration: 10s; --left: 31%; --opacity: 0.32; --top: -97%; --end: 137%; }
+.rain:nth-of-type(82) { --delay: 0s; --duration: 5s; --left: 65%; --opacity: 0.51; --top: -54%; --end: 94%; }
+.rain:nth-of-type(83) { --delay: 10s; --duration: 6s; --left: 81%; --opacity: 0.57; --top: -86%; --end: 126%; }
+.rain:nth-of-type(84) { --delay: 6s; --duration: 6s; --left: 56%; --opacity: 0.31; --top: -67%; --end: 107%; }
+.rain:nth-of-type(85) { --delay: 14s; --duration: 5s; --left: 80%; --opacity: 0.33; --top: -83%; --end: 123%; }
+.rain:nth-of-type(86) { --delay: 10s; --duration: 9s; --left: 71%; --opacity: 0.31; --top: -88%; --end: 128%; }
+.rain:nth-of-type(87) { --delay: 15s; --duration: 10s; --left: 73%; --opacity: 0.51; --top: -91%; --end: 131%; }
+.rain:nth-of-type(88) { --delay: 11s; --duration: 5s; --left: 39%; --opacity: 0.56; --top: -58%; --end: 98%; }
+.rain:nth-of-type(89) { --delay: 6s; --duration: 9s; --left: 70%; --opacity: 0.36; --top: -53%; --end: 93%; }
+.rain:nth-of-type(90) { --delay: 6s; --duration: 9s; --left: 72%; --opacity: 0.49; --top: -55%; --end: 95%; }
+.rain:nth-of-type(91) { --delay: 18s; --duration: 7s; --left: 75%; --opacity: 0.34; --top: -55%; --end: 95%; }
+.rain:nth-of-type(92) { --delay: 19s; --duration: 7s; --left: 72%; --opacity: 0.36; --top: -72%; --end: 112%; }
+.rain:nth-of-type(93) { --delay: 9s; --duration: 5s; --left: 29%; --opacity: 0.44; --top: -52%; --end: 92%; }
+.rain:nth-of-type(94) { --delay: 1s; --duration: 8s; --left: 51%; --opacity: 0.58; --top: -82%; --end: 122%; }
+.rain:nth-of-type(95) { --delay: 4s; --duration: 8s; --left: 72%; --opacity: 0.36; --top: -59%; --end: 99%; }
+.rain:nth-of-type(96) { --delay: 2s; --duration: 8s; --left: 16%; --opacity: 0.59; --top: -54%; --end: 94%; }
+.rain:nth-of-type(97) { --delay: 6s; --duration: 8s; --left: 71%; --opacity: 0.42; --top: -95%; --end: 135%; }
+.rain:nth-of-type(98) { --delay: 5s; --duration: 6s; --left: 57%; --opacity: 0.59; --top: -56%; --end: 96%; }
+.rain:nth-of-type(99) { --delay: 9s; --duration: 9s; --left: 73%; --opacity: 0.33; --top: -85%; --end: 125%; }
+.rain:nth-of-type(100) { --delay: 18s; --duration: 5s; --left: 23%; --opacity: 0.6; --top: -81%; --end: 121%; }
+.rain:nth-of-type(101) { --delay: 12s; --duration: 7s; --left: 54%; --opacity: 0.59; --top: -74%; --end: 114%; }
+.rain:nth-of-type(102) { --delay: 12s; --duration: 10s; --left: 94%; --opacity: 0.51; --top: -91%; --end: 131%; }
+.rain:nth-of-type(103) { --delay: 4s; --duration: 8s; --left: 47%; --opacity: 0.32; --top: -57%; --end: 97%; }
+.rain:nth-of-type(104) { --delay: 4s; --duration: 6s; --left: 86%; --opacity: 0.33; --top: -84%; --end: 124%; }
+.rain:nth-of-type(105) { --delay: 11s; --duration: 6s; --left: 66%; --opacity: 0.31; --top: -51%; --end: 91%; }
+.rain:nth-of-type(106) { --delay: 10s; --duration: 10s; --left: 90%; --opacity: 0.38; --top: -83%; --end: 123%; }
+.rain:nth-of-type(107) { --delay: 6s; --duration: 6s; --left: 19%; --opacity: 0.37; --top: -67%; --end: 107%; }
+.rain:nth-of-type(108) { --delay: 14s; --duration: 6s; --left: 2%; --opacity: 0.37; --top: -97%; --end: 137%; }
+.rain:nth-of-type(109) { --delay: 6s; --duration: 6s; --left: 31%; --opacity: 0.33; --top: -68%; --end: 108%; }
+.rain:nth-of-type(110) { --delay: 9s; --duration: 7s; --left: 90%; --opacity: 0.55; --top: -88%; --end: 128%; }
+.rain:nth-of-type(111) { --delay: 13s; --duration: 6s; --left: 47%; --opacity: 0.33; --top: -58%; --end: 98%; }
+.rain:nth-of-type(112) { --delay: 3s; --duration: 5s; --left: 72%; --opacity: 0.35; --top: -80%; --end: 120%; }
+.rain:nth-of-type(113) { --delay: 2s; --duration: 8s; --left: 27%; --opacity: 0.51; --top: -74%; --end: 114%; }
+.rain:nth-of-type(114) { --delay: 0s; --duration: 9s; --left: 40%; --opacity: 0.45; --top: -85%; --end: 125%; }
+.rain:nth-of-type(115) { --delay: 6s; --duration: 6s; --left: 56%; --opacity: 0.38; --top: -82%; --end: 122%; }
+.rain:nth-of-type(116) { --delay: 13s; --duration: 6s; --left: 32%; --opacity: 0.49; --top: -93%; --end: 133%; }
+.rain:nth-of-type(117) { --delay: 1s; --duration: 7s; --left: 21%; --opacity: 0.33; --top: -90%; --end: 130%; }
+.rain:nth-of-type(118) { --delay: 8s; --duration: 7s; --left: 65%; --opacity: 0.35; --top: -70%; --end: 110%; }
+.rain:nth-of-type(119) { --delay: 11s; --duration: 5s; --left: 67%; --opacity: 0.38; --top: -64%; --end: 104%; }
+.rain:nth-of-type(120) { --delay: 9s; --duration: 5s; --left: 36%; --opacity: 0.48; --top: -88%; --end: 128%; }
+.rain:nth-of-type(121) { --delay: 9s; --duration: 10s; --left: 80%; --opacity: 0.51; --top: -77%; --end: 117%; }
+.rain:nth-of-type(122) { --delay: 16s; --duration: 5s; --left: 89%; --opacity: 0.36; --top: -94%; --end: 134%; }
+.rain:nth-of-type(123) { --delay: 1s; --duration: 6s; --left: 24%; --opacity: 0.45; --top: -96%; --end: 136%; }
+.rain:nth-of-type(124) { --delay: 15s; --duration: 9s; --left: 44%; --opacity: 0.45; --top: -72%; --end: 112%; }
+.rain:nth-of-type(125) { --delay: 9s; --duration: 7s; --left: 51%; --opacity: 0.58; --top: -97%; --end: 137%; }
+.rain:nth-of-type(126) { --delay: 11s; --duration: 7s; --left: 27%; --opacity: 0.45; --top: -95%; --end: 135%; }
+.rain:nth-of-type(127) { --delay: 6s; --duration: 5s; --left: 83%; --opacity: 0.48; --top: -68%; --end: 108%; }
+.rain:nth-of-type(128) { --delay: 11s; --duration: 8s; --left: 77%; --opacity: 0.56; --top: -81%; --end: 121%; }
+.rain:nth-of-type(129) { --delay: 7s; --duration: 8s; --left: 38%; --opacity: 0.43; --top: -85%; --end: 125%; }
+.rain:nth-of-type(130) { --delay: 17s; --duration: 7s; --left: 14%; --opacity: 0.31; --top: -72%; --end: 112%; }
+.rain:nth-of-type(131) { --delay: 1s; --duration: 7s; --left: 19%; --opacity: 0.46; --top: -74%; --end: 114%; }
+.rain:nth-of-type(132) { --delay: 10s; --duration: 9s; --left: 94%; --opacity: 0.48; --top: -52%; --end: 92%; }
+.rain:nth-of-type(133) { --delay: 15s; --duration: 10s; --left: 70%; --opacity: 0.31; --top: -88%; --end: 128%; }
+.rain:nth-of-type(134) { --delay: 15s; --duration: 9s; --left: 56%; --opacity: 0.5; --top: -76%; --end: 116%; }
+.rain:nth-of-type(135) { --delay: 15s; --duration: 9s; --left: 7%; --opacity: 0.53; --top: -74%; --end: 114%; }
+.rain:nth-of-type(136) { --delay: 14s; --duration: 6s; --left: 58%; --opacity: 0.55; --top: -69%; --end: 109%; }
+.rain:nth-of-type(137) { --delay: 18s; --duration: 8s; --left: 9%; --opacity: 0.43; --top: -66%; --end: 106%; }
+.rain:nth-of-type(138) { --delay: 15s; --duration: 10s; --left: 14%; --opacity: 0.57; --top: -78%; --end: 118%; }
+.rain:nth-of-type(139) { --delay: 6s; --duration: 10s; --left: 76%; --opacity: 0.47; --top: -96%; --end: 136%; }
+.rain:nth-of-type(140) { --delay: 10s; --duration: 7s; --left: 15%; --opacity: 0.57; --top: -67%; --end: 107%; }
+.rain:nth-of-type(141) { --delay: 4s; --duration: 10s; --left: 37%; --opacity: 0.46; --top: -69%; --end: 109%; }
+.rain:nth-of-type(142) { --delay: 19s; --duration: 5s; --left: 22%; --opacity: 0.52; --top: -87%; --end: 127%; }
+.rain:nth-of-type(143) { --delay: 13s; --duration: 8s; --left: 86%; --opacity: 0.53; --top: -100%; --end: 140%; }
+.rain:nth-of-type(144) { --delay: 3s; --duration: 10s; --left: 71%; --opacity: 0.54; --top: -77%; --end: 117%; }
+.rain:nth-of-type(145) { --delay: 1s; --duration: 8s; --left: 78%; --opacity: 0.44; --top: -83%; --end: 123%; }
+.rain:nth-of-type(146) { --delay: 17s; --duration: 5s; --left: 96%; --opacity: 0.6; --top: -71%; --end: 111%; }
+.rain:nth-of-type(147) { --delay: 9s; --duration: 6s; --left: 43%; --opacity: 0.44; --top: -96%; --end: 136%; }
+.rain:nth-of-type(148) { --delay: 3s; --duration: 6s; --left: 32%; --opacity: 0.39; --top: -69%; --end: 109%; }
+.rain:nth-of-type(149) { --delay: 3s; --duration: 10s; --left: 15%; --opacity: 0.48; --top: -57%; --end: 97%; }
+.rain:nth-of-type(150) { --delay: 13s; --duration: 7s; --left: 44%; --opacity: 0.44; --top: -51%; --end: 91%; }
+
+/* First lets set a background */
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('clouds.png');
+  background-position: center center;
+  background-origin: content-box;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+/* Now the same background, but with brightness filters */
+.lightning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('clouds.png');
+  background-position: center center;
+  background-origin: content-box;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: brightness(3);
+  z-index: -1;
+}
+
+/* Now just a opacity animation */
+.flashit {
+  animation: flash ease-out 7s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes flash {
+  from { opacity: 0; }
+  92% { opacity: 0; }
+  93% { opacity: 0.6; }
+  94% { opacity: 0.2; }
+  96% { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Fade-in page */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.fade-in.one {
+  animation-delay: 1s;
+}
+
+/* Spacing that used to come from invisible 1-pixel images and line breaks */
+.gap-1 { height: 1.15em; height: 1lh; }
+.gap-22 { height: 25.3em; height: 22lh; }
+
+#div1 { float: left; }
+#div2 { float: right; }
