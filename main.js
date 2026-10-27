@@ -41,12 +41,6 @@ function toggleDetails(button) {
     return false;
 }
 
-function emailCurrentPage() {
-    var subject = "Eagle Sundance";
-    var body = "Boozhoo! Greetings! Follow this link to our Eagle Sundance page: https://mke-joe.github.io/Directions-to-Eagle-Sundance. Please contact me with any questions! Miigwech. Thank you.";
-    window.location.href = "mailto:?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-}
-
 // "Text This Page": iPhones/iPads/Macs want sms:&body=, everything else sms:?body=.
 function setupTextLink(id) {
     var link = document.getElementById(id);
